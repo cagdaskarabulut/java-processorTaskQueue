@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @SpringBootApplication
-public class JavaProcessorTaskQueueApplication {
+public class JavaProcessorTaskQueueApplication implements test{
 
     private static Integer currentCycle;
     private static Integer lastActiveCycle;
@@ -84,5 +84,10 @@ public class JavaProcessorTaskQueueApplication {
                 .collect(Collectors.toList());
 
         return lastActiveCycle;
+    }
+
+    @Override
+    public String myText(String text) {
+        return null;
     }
 }
